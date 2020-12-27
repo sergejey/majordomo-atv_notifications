@@ -1,0 +1,17 @@
+
+ <!-- action usual -->
+ <!-- table atv_devices search -->
+ [#if VIEW_MODE="search_atv_devices" || VIEW_MODE=""#]
+  [#inc atv_devices_search_admin.html#]
+ [#endif VIEW_MODE#]
+ <!-- / table atv_devices search -->
+ <!-- table atv_devices edit -->
+ [#if VIEW_MODE="edit_atv_devices"#]
+   [#inc atv_devices_edit.html#]
+ [#endif VIEW_MODE#]
+ <!-- / table atv_devices edit -->
+ <!-- table atv_devices view --> 
+ [#if VIEW_MODE="view_atv_devices"#]
+   [#inc atv_devices_view.html#]
+ [#endif VIEW_MODE#]
+ <!-- / table atv_devices view -->
