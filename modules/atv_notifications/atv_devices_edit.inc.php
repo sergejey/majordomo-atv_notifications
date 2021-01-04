@@ -26,6 +26,7 @@ if ($this->mode == 'update') {
     $rec['MIN_MSG_LEVEL'] = gr('min_msg_level');
 
     if ($rec['ID']) {
+        $rec['MSG_TITLE']=gr('msg_title','trim');
         $rec['MSG_DURATION']=gr('msg_duration','int');
         $rec['MSG_FONTSIZE']=gr('msg_fontsize','int');
         $rec['MSG_BKGCOLOR']=gr('msg_bkgcolor');

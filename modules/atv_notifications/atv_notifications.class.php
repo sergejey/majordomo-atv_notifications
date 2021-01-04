@@ -194,6 +194,7 @@ class atv_notifications extends module
             "interrupt" => "false"
         );
 
+        if ($rec['MSG_TITLE']) $payload['title']=processTitle($rec['MSG_TITLE']);
         if ($rec['MSG_DURATION']) $payload['duration']=(string)$rec['MSG_DURATION'];
         if ($rec['MSG_FONTSIZE']) $payload['fontsize']=(string)$rec['MSG_FONTSIZE'];
         if ($rec['MSG_BKGCOLOR']) $payload['bkgcolor']=(string)$rec['MSG_BKGCOLOR'];
@@ -285,6 +286,7 @@ class atv_notifications extends module
  atv_devices: TITLE varchar(100) NOT NULL DEFAULT ''
  atv_devices: IP varchar(255) NOT NULL DEFAULT ''
  atv_devices: MIN_MSG_LEVEL varchar(255) NOT NULL DEFAULT ''
+ atv_devices: MSG_TITLE varchar(255) NOT NULL DEFAULT ''
  atv_devices: MSG_DURATION int(3) NOT NULL DEFAULT '5'
  atv_devices: MSG_FONTSIZE int(3) NOT NULL DEFAULT '3'
  atv_devices: MSG_BKGCOLOR varchar(20) NOT NULL DEFAULT '#607d8b'
